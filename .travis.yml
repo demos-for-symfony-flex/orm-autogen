@@ -29,6 +29,7 @@ before_install:
 
 install:
 - composer install
+- composer initialize
 
 script: true
 
@@ -37,6 +38,11 @@ after_script:
 
 - composer show --latest
 - $GOPATH/bin/ccat composer.json
+
+- composer console
+- composer console -- list doctrine
+- composer console -- help make:entity
+
 - $GOPATH/bin/ccat config/packages/doctrine.yaml
 
 - composer require --no-scripts sensiolabs/security-checker
