@@ -34,11 +34,12 @@ before_install:
 install:
 - composer install
 - command -v console
-# - composer initialize
 
 script: true
 
 after_script:
+- composer initialize
+
 - ls --color
 - ls --recursive --color bin
 
