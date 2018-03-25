@@ -34,15 +34,11 @@ before_install:
 install:
 - composer install
 - command -v console
+- composer initialize
 
 script: true
 
 after_script:
-- ls --almost-all --color var
-- ls --almost-all --color var/data
-- install --directory var/data
-- composer initialize
-
 - ls --almost-all --color
 - cat .env
 - cat .env.dist
@@ -52,7 +48,7 @@ after_script:
 - composer show --latest
 - $GOPATH/bin/ccat composer.json
 
-- composer console
+- composer console --ansi
 - composer console -- list doctrine --ansi
 - composer console -- help doctrine:database:create --ansi
 - composer console -- help make:entity --ansi
