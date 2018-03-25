@@ -42,6 +42,7 @@ after_script:
 
 - ls --almost-all --color
 - cat .env
+- cat .env.dist
 - ls --recursive --color bin
 
 - composer show --latest
