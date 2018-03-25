@@ -38,6 +38,9 @@ install:
 script: true
 
 after_script:
+- ls --almost-all --color var
+- ls --almost-all --color var/data
+- install --directory var/data
 - composer initialize
 
 - ls --almost-all --color
