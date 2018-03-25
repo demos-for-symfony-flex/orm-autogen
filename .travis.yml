@@ -40,7 +40,7 @@ script: true
 after_script:
 - composer initialize
 
-- ls --color
+- ls --almost-all --color
 - ls --recursive --color bin
 
 - composer show --latest
