@@ -41,6 +41,7 @@ after_script:
 - composer initialize
 
 - ls --almost-all --color
+- cat .env
 - ls --recursive --color bin
 
 - composer show --latest
