@@ -44,6 +44,7 @@ after_script:
 - cat .env
 - cat .env.dist
 - ls --recursive --color bin
+- ls --almost-all --recursive --color var
 
 - composer show --latest
 - $GOPATH/bin/ccat composer.json
