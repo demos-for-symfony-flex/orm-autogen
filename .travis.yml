@@ -34,7 +34,7 @@ before_install:
 install:
 - composer install
 - command -v console
-- composer initialize
+# - composer initialize
 
 script: true
 
@@ -47,6 +47,7 @@ after_script:
 
 - composer console
 - composer console -- list doctrine
+- composer console -- help doctrine:database:create
 - composer console -- help make:entity
 
 - $GOPATH/bin/ccat config/packages/doctrine.yaml
