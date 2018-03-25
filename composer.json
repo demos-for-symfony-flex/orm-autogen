@@ -4,7 +4,7 @@
     "license": "MIT",
     "description": "A minimal ORM Flex project",
     "require": {
-        "symfony/flex": "^1.0"
+        "symfony/flex": "^1.0",
         "symfony/maker-bundle": "^1",
         "symfony/orm-pack": "^1",
         "symfony/yaml": "^3.4 || ^4.0"
@@ -18,8 +18,11 @@
         }
     },
     "scripts": {
+        "console": [
+            "console"
+        ],
         "initialize": [
-            ""
+            "console doctrine:database:create"
         ],
         "security:check": [
             "security-checker security:check"
