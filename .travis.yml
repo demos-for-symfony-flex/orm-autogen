@@ -49,7 +49,8 @@ after_script:
 - ls --recursive --color bin
 - ls --almost-all --recursive --color var
 - ls --recursive --color src
-- php -s src/Entity/Product.php | elinks -force-html -dump-color-mode 4 -dump
+- php -s src/Entity/Author.php | elinks -force-html -dump-color-mode 4 -dump
+- php -s src/Entity/BlogPost.php | elinks -force-html -dump-color-mode 4 -dump
 
 - composer show --latest
 - $GOPATH/bin/ccat composer.json
