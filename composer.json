@@ -27,7 +27,8 @@
         ],
         "initialize": [
             "console doctrine:database:create",
-            "console make:entity Product",
+            "console make:entity Author",
+            "console make:entity BlogPost",
             "console doctrine:migrations:diff",
             "console doctrine:migrations:migrate --no-interaction"
         ],
