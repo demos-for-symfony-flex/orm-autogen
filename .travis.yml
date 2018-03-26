@@ -47,8 +47,8 @@ after_script:
 - composer initialize -- --ansi
 - composer console -- help doctrine:migrations:diff --ansi
 - composer console -- help doctrine:migrations:migrate --ansi
-- console doctrine:migrations:diff
-- console doctrine:migrations:migrate --no-interaction
+- composer console -- doctrine:migrations:diff
+- composer console -- doctrine:migrations:migrate --no-interaction
 
 - ls --almost-all --color
 - cat .env
