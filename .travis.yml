@@ -18,7 +18,7 @@ php:
 
 env:
   global:
-  - PATH=$TRAVIS_BUILD_DIR/bin::$PATH
+  # - PATH=$TRAVIS_BUILD_DIR/bin::$PATH
 
 matrix:
   fast_finish: true
