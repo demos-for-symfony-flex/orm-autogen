@@ -17,6 +17,7 @@
             "App\\": "src/"
         }
     },
+    "bin": ["bin/console"],
     "scripts": {
         "console": [
             "console"
