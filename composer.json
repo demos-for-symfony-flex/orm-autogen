@@ -27,8 +27,8 @@
         ],
         "initialize": [
             "console doctrine:database:create",
-            "console make:entity -vvv --regenerate Author",
-            "console make:entity -vvv --regenerate BlogPost",
+            "console make:entity -vvv Author",
+            "console make:entity -vvv BlogPost",
             "console doctrine:migrations:diff --quiet",
             "console doctrine:migrations:migrate --no-interaction --quiet"
         ],
