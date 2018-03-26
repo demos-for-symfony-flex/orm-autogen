@@ -38,7 +38,7 @@ before_install:
 
 install:
 - composer install
-- composer initialize -- --ansi
+- composer initialize # -- --ansi
 
 script: true
 
