@@ -54,8 +54,8 @@ after_script:
 - php -s src/Entity/Author.php | elinks -force-html -dump-color-mode 4 -dump
 - php -s src/Entity/BlogPost.php | elinks -force-html -dump-color-mode 4 -dump
 - ls --color src/Repository
-- php -s src/Repository/Author.php | elinks -force-html -dump-color-mode 4 -dump
-- php -s src/Repository/BlogPost.php | elinks -force-html -dump-color-mode 4 -dump
+- php -s src/Repository/AuthorRepository.php | elinks -force-html -dump-color-mode 4 -dump
+- php -s src/Repository/BlogPostRepository.php | elinks -force-html -dump-color-mode 4 -dump
 
 - composer show --latest
 - $GOPATH/bin/ccat composer.json
