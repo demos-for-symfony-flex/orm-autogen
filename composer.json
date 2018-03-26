@@ -22,7 +22,8 @@
             "console"
         ],
         "initialize": [
-            "console doctrine:database:create"
+            "console doctrine:database:create",
+            "console make:entity Product"
         ],
         "security:check": [
             "security-checker security:check"
