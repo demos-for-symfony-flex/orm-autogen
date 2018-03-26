@@ -20,7 +20,7 @@
     "bin": ["bin/console"],
     "config": {
         "bin-dir": "bin"
-    }
+    },
     "scripts": {
         "console": [
             "console"
