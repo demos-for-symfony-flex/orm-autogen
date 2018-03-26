@@ -29,6 +29,7 @@
             "console doctrine:database:create",
             "console make:entity -vvv Author",
             "console make:entity -vvv BlogPost",
+            "cp src/Entity_modified/* src/Entity",
             "console doctrine:migrations:diff --quiet",
             "console doctrine:migrations:migrate --no-interaction --quiet"
         ],
