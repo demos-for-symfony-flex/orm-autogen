@@ -1,6 +1,11 @@
 ---
 language: php
 
+addons:
+  apt:
+    packages:
+    - elinks # For dysplaying php files on console.
+
 cache:
   directories:
   - $HOME/.composer/cache/files
@@ -39,11 +44,16 @@ install:
 script: true
 
 after_script:
+- console doctrine:migrations:diff
+- console doctrine:migrations:migrate
+
 - ls --almost-all --color
 - cat .env
 - cat .env.dist
 - ls --recursive --color bin
 - ls --almost-all --recursive --color var
+- ls --recursive --color src
+- php -s src/Entity/Product.php | elinks -force-html -dump-color-mode 4 -dump
 
 - composer show --latest
 - $GOPATH/bin/ccat composer.json
