@@ -39,11 +39,12 @@ before_install:
 install:
 - composer install
 # - command -v console
-- composer initialize -- --ansi
 
 script: true
 
 after_script:
+- ls --recursive --color vendor/bin
+- composer initialize -- --ansi
 - composer console -- help doctrine:migrations:diff --ansi
 - composer console -- help doctrine:migrations:migrate --ansi
 - console doctrine:migrations:diff
