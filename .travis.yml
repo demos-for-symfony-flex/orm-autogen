@@ -44,8 +44,8 @@ install:
 script: true
 
 after_script:
-- composer console -- doctrine:migrations:diff --ansi
-- composer console -- doctrine:migrations:migrate --ansi
+- composer console -- help doctrine:migrations:diff --ansi
+- composer console -- help doctrine:migrations:migrate --ansi
 - console doctrine:migrations:diff
 - console doctrine:migrations:migrate
 
@@ -64,7 +64,7 @@ after_script:
 - composer console -- list doctrine --ansi
 - composer console -- help doctrine:database:create --ansi
 - composer console -- help make:entity --ansi
-- composer console -- help doctrine:generate:entity --ansi
+- composer console -- help doctrine:generate:entities --ansi
 
 - $GOPATH/bin/ccat config/packages/doctrine.yaml
 
