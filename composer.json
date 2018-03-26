@@ -29,8 +29,8 @@
             "console doctrine:database:create",
             "console make:entity Author",
             "console make:entity BlogPost",
-            "console doctrine:migrations:diff",
-            "console doctrine:migrations:migrate --no-interaction"
+            "console doctrine:migrations:diff --quiet",
+            "console doctrine:migrations:migrate --no-interaction --quiet"
         ],
         "security:check": [
             "security-checker security:check"
