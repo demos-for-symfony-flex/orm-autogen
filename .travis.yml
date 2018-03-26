@@ -38,16 +38,11 @@ before_install:
 
 install:
 - composer install
-# - command -v console
+- composer initialize -- --ansi
 
 script: true
 
 after_script:
-- ls --recursive --color vendor/bin
-- composer initialize -- --ansi
-- composer console -- doctrine:migrations:diff
-- composer console -- doctrine:migrations:migrate --no-interaction
-
 - ls --almost-all --color
 - cat .env
 - cat .env.dist
