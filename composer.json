@@ -27,7 +27,9 @@
         ],
         "initialize": [
             "console doctrine:database:create",
-            "console make:entity Product"
+            "console make:entity Product",
+            "console doctrine:migrations:diff",
+            "console doctrine:migrations:migrate --no-interaction"
         ],
         "security:check": [
             "security-checker security:check"
