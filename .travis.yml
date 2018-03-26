@@ -45,8 +45,6 @@ script: true
 after_script:
 - ls --recursive --color vendor/bin
 - composer initialize -- --ansi
-- composer console -- help doctrine:migrations:diff --ansi
-- composer console -- help doctrine:migrations:migrate --ansi
 - composer console -- doctrine:migrations:diff
 - composer console -- doctrine:migrations:migrate --no-interaction
 
@@ -65,7 +63,10 @@ after_script:
 - composer console -- list doctrine --ansi
 - composer console -- help doctrine:database:create --ansi
 - composer console -- help make:entity --ansi
-- composer console -- help doctrine:generate:entities --ansi
+# - composer console -- help doctrine:generate:entities --ansi
+- composer console -- help make:migration --ansi
+- composer console -- help doctrine:migrations:diff --ansi
+- composer console -- help doctrine:migrations:migrate --ansi
 
 - $GOPATH/bin/ccat config/packages/doctrine.yaml
 
