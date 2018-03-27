@@ -56,18 +56,32 @@ after_script:
 - ls --color src/Repository
 - php -s src/Repository/AuthorRepository.php | elinks -force-html -dump-color-mode 4 -dump
 - php -s src/Repository/BlogPostRepository.php | elinks -force-html -dump-color-mode 4 -dump
+- composer console -- doctrine:query:sql 'INSERT INTO author (name) VALUES ('Tom B. Erichsen');'
+- composer console -- doctrine:query:dql 'SELECT a FROM App/Entity/Author a' #;?
+- composer console -- doctrine:query:sql 'SELECT * FROM author' #;?
 
 - composer show --latest
 - $GOPATH/bin/ccat composer.json
 
 - composer console -- --ansi
+
 - composer console -- list doctrine --ansi
 - composer console -- help doctrine:database:create --ansi
-- composer console -- help make:entity --ansi
 # - composer console -- help doctrine:generate:entities --ansi
-- composer console -- help make:migration --ansi
+- composer console -- help doctrine:mapping:convert --ansi
+- composer console -- help doctrine:mapping:import --ansi
+- composer console -- help doctrine:mapping:info --ansi
 - composer console -- help doctrine:migrations:diff --ansi
 - composer console -- help doctrine:migrations:migrate --ansi
+- composer console -- help doctrine:query:dql --ansi
+- composer console -- help doctrine:query:sql --ansi
+- composer console -- help doctrine:schema:validate --ansi
+
+- composer console -- list make --ansi
+- composer console -- help make:crud --ansi
+- composer console -- help make:entity --ansi
+- composer console -- help make:migration --ansi
+
 
 - $GOPATH/bin/ccat config/packages/doctrine.yaml
 
