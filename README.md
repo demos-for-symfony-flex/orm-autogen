@@ -16,6 +16,12 @@
 ## CRUD
 * [ERROR] Missing packages: to use the make:crud command, run:
   * composer require annotations form validator twig-bundle security-csrf
+    * sensio/framework-extra-bundle
+    * symfony/form
+    * symfony/validator
+    * symfony/twig-bundle
+    * symfony/security-csrf
+
 
 ## Bugs in symfony/demo
 * sqlite files in var/data: does this directory exist?
