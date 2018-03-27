@@ -13,6 +13,10 @@
 ###< symfony/framework-bundle ###
 ```
 
+## CRUD
+* [ERROR] Missing packages: to use the make:crud command, run:
+  * composer require annotations form validator twig-bundle security-csrf
+
 ## Bugs in symfony/demo
 * sqlite files in var/data: does this directory exist?
 * .env.dist has been contaminated
