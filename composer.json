@@ -5,6 +5,7 @@
     "description": "A minimal ORM Flex project",
     "require": {
         "sensio/framework-extra-bundle": "^5.1",
+        "symfony/console": "^3.4 || ^4.0",
         "symfony/flex": "^1.0",
         "symfony/form": "^3.4 || ^4.0",
         "symfony/maker-bundle": "^1.0",
