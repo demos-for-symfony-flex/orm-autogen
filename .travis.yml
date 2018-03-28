@@ -90,6 +90,9 @@ after_script:
 - composer console -- list router --ansi
 - composer console -- help router:match --ansi
 
+- composer console -- list server --ansi
+- composer console -- help server:start --ansi
+
 
 - $GOPATH/bin/ccat config/packages/doctrine.yaml
 
