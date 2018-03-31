@@ -1,5 +1,5 @@
 {
-    "name": "symfony-flex-demo/orm",
+    "name": "symfony-flex-demo/orm-autogen",
     "type": "project",
     "license": "MIT",
     "description": "A minimal ORM Flex project",
