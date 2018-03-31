@@ -61,4 +61,14 @@ class Author
     {
         return $this->name;
     }
+
+    /**
+     * Convert to string
+     *
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->getName();
+    }
 }
