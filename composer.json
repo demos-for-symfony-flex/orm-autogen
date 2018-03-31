@@ -40,7 +40,9 @@
             "@php -r \"copy(implode(DIRECTORY_SEPARATOR, ['src_modified', 'Entity', 'Author.php']), implode(DIRECTORY_SEPARATOR, ['src', 'Entity', 'Author.php']));\"",
             "@php -r \"copy(implode(DIRECTORY_SEPARATOR, ['src_modified', 'Entity', 'BlogPost.php']), implode(DIRECTORY_SEPARATOR, ['src', 'Entity', 'BlogPost.php']));\"",
             "console doctrine:migrations:diff --quiet",
-            "console doctrine:migrations:migrate --no-interaction --quiet"
+            "console doctrine:migrations:migrate --no-interaction --quiet",
+            "console make:crud Author",
+            "console make:crud BlogPost"
         ],
         "security:check": [
             "security-checker security:check"
