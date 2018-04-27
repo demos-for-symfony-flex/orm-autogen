@@ -1,5 +1,7 @@
 # orm
 
+[![Build Status](https://travis-ci.org/symfony-flex-demo/orm-autogen.svg?branch=master)](https://travis-ci.org/symfony-flex-demo/orm-autogen)
+
 * *[Databases and the Doctrine ORM](https://symfony.com/doc/current/doctrine.html)*
 * *[The Dotenv Component](https://symfony.com/doc/current/components/dotenv.html)*
 
