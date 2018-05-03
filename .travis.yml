@@ -14,7 +14,7 @@ php:
 - nightly
 - 7.2
 - 7.1
-- 7.0
+# - 7.0 symfony/maker-bundle (v1.4.4): [ERROR] The make:entity command requires that you use PHP 7.1 or higher.
 
 # env:
   # global:
